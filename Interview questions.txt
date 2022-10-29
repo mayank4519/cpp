@@ -1,0 +1,113 @@
+Shared memory
+Socket communication
+Read about the QoS algorithm
+TCP n udp
+Routers
+Switches
+Stack n heap
+Memory segments
+IP header
+Thread process resource sharing
+2 programs
+Sorting algorithms
+Link list
+
+Structure tagging
+Project detail
+More about Routers
+ntohs htons
+
+Virtual pointer implementation internally
+Sizeof and strlen of array
+Mutex and binary semaphore difference
+Loop in a linked list
+Reversal of linked list
+Static variable in class
+Singleton class
+Volatile keyword
+Object slicing
+Why only public is used in class inheritance
+Using usage
+Shared and unique pointer
+Lambda function
+Boost
+
+Virtual memory
+Demand paging
+Page replacement techniques-LRU N FIFO
+Thrashing
+Page fault
+Invalid page
+Sliding window
+
+Static keyword
+Global variable n local var with same name
+Define your copy constructor
+Volatile keyword
+Full duplex code implementation
+Message passing
+Singleton classes
+How to pass n number of arguments and access them
+Bitwise operation
+
+Link list programs
+Bitwise operation questions
+Virtual keyword questions
+
+Queue using stack
+
+Read more about char array n string.
+Read about templates and rtti APIs
+Exceptions
+
+
+Run time polymorphism
+Compile time polymorphism
+Operator overloading
+Access specifiers PB PT and pv
+string class methods
+Shallow and deep copying program using copy constructor
+Program related to Maps
+Binary search tree insertion
+Npos
+
+Malloc and calloc
+Difference between map and list in STL
+Why ll his better than array or the other way?
+Linux cmds
+Project details
+Default methods of a class
+String class methods
+
+Inline functions
+Size of(empty structure/empty class)
+Exception in virtual function
+Shallow and deep copy
+Can we call destructor using object?
+Delete middle node of linked list.
+Reverse of string
+Pattern finding in strings
+Can stl be used in shared memory ipc.
+What are different ipcs
+Advantage of multi threading
+Socket communication APIs
+Message queues
+Copy constructor syntax
+Overload new and delete operator
+Create Singleton class
+Printf without any argument
+Have you used boost library
+What is object slicing
+How virtual functions are internally implemented
+How to delete memory without using free function.
+Differnce between threads and process
+Semaphore and mutex.
+Program to create thread.
+Project details
+
+
+Multithreading questions
+How many queues are present while using message passing communication
+
+https://www.interserver.net/tips/kb/virtual-memory-demand-paging/
+

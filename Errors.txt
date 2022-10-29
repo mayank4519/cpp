@@ -1,0 +1,14 @@
+function overloading errors:
+1. fn overload with one as call by value and another call by reference
+2. fn declaed as float and during calling double value is passed.
+3. fn overload with one as one arg and another fn as 2 arg where one of them is default arg
+4. static fn's cannot be overloaded
+
+SIze of object of a class:
+https://www.cprogramming.com/tutorial/size_of_class_object.html
+1. only non-static members are calculated to calculate SIze
+2. order of data members matter.
+3. virtual fns add 4 bytes as vptr pointer.
+4. compiler being used.
+5. Mode of inherintance
+

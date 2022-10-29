@@ -1,0 +1,44 @@
+const char *ptr : This is a pointer to a constant character. You cannot change the value pointed by ptr, 
+but you can change the pointer itself. “const char *” is a (non-const) pointer to a const char.
+
+NOTE: There is no difference between const char *p and char const *p as both are pointer to a const char and
+ position of ‘*'(asterik) is also same.
+ 
+char *const ptr : This is a constant pointer to non-constant character. You cannot change the pointer p, 
+but can change the value pointed by ptr.
+NOTE: Pointer always points to same address, only the value at the location is changed.
+
+const char * const ptr : This is a constant pointer to constant character. 
+You can neither change the value pointed by ptr nor the pointer ptr.
+NOTE: char const * const ptr is same as const char *const ptr.
+
+constexpr indicates a value that's constant and known during compilation.
+const indicates a value that's only constant; it's not compulsory to know during compilation.
+
+int sz;
+constexpr auto arraySize1 = sz;    // error! sz's value unknown at compilation
+std::array<int, sz> data1;         // error! same problem
+
+constexpr auto arraySize2 = 10;    // fine, 10 is a compile-time constant
+std::array<int, arraySize2> data2; // fine, arraySize2 is constexpr
+Note that const doesn’t offer the same guarantee as constexpr, because const objects need not be initialized with values known during compilation.
+
+int sz;
+const auto arraySize = sz;       // fine, arraySize is const copy of sz
+std::array<int, arraySize> data; // error! arraySize's value unknown at compilation
+All constexpr objects are const, but not all const objects are constexpr.
+
+If you want compilers to guarantee that a variable has a value that can be used in contexts requiring compile-time constants, 
+the tool to reach for is constexpr, not const.
+
+int x = 10;
+const int *ptr = &x;
+*ptr = 20; //error
+
+int *p;
+int *const ptr = &x;
+ptr = p; //error read only
+
+const int * const ptr = &x;
+*ptr = 20; //error
+ptr = p;//error

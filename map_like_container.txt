@@ -1,0 +1,80 @@
+#include <iostream>
+#include <cmath>
+#include <functional>
+
+enum Operation {
+ADD = 0,
+MULTI,
+SUB,
+DIV, 
+EXP
+};
+
+class Calculator {
+public:
+    Calculator(): m_calc( [](double a, double b) -> double { return a; } )
+    {}
+    
+    Calculator& operator[](Operation op) {
+        
+        switch(op) {
+            case ADD:
+                m_calc = [](double a, double b) -> double {return a+b;};
+                break;
+            case MULTI:
+                m_calc = [](double a, double b) -> double {return a*b;};
+                break;
+            case DIV:
+                m_calc = [](double a, double b) -> double {return a/b;};
+                break;
+            case EXP:
+                m_calc = pow;
+                break;
+            case SUB:
+                m_calc = [](double a, double b) -> double {return a-b;};
+                break;
+            default:
+                break;
+        }
+        return *this;
+    }
+    
+    double
+    calculate(double a, double b) {
+        return m_calc(a,b);
+    }
+    
+private:
+    std::function<double(double, double)> m_calc;
+};
+
+class Accumulator {
+public:
+    Accumulator() = delete;
+    explicit Accumulator(double value) : m_value(value)
+    {}
+    
+    Accumulator& operator()(Operation op, double val) {
+        m_value = m_func[op].calculate(m_value, val);
+        return *this;
+    }
+    
+    operator double() {
+        return m_value;
+    }
+private:
+    double m_value;
+    Calculator m_func;
+};
+
+double circleArea(double radius) {
+    return Accumulator(radius)
+                      (EXP, 2)
+                      (MULTI, 3.14);
+}
+
+int main()
+{
+   double value1 = circleArea(4);
+   std::cout << value1;
+}
