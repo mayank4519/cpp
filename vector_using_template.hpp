@@ -18,6 +18,7 @@ public:
     //COPY ASSIGNMENT
     vector<T>& operator=(vector<T> & vv) 
     {
+        delete [] m_vec;
         capacity = vv.capacity;
         current = vv.current;
         m_vec = new T[current];
@@ -30,6 +31,7 @@ public:
 
     //COPY CONSTRUCTOR
     vector(vector<T> &vv) {
+        delete [] m_vec;
         capacity = vv.capacity;
         current = vv.current;
         m_vec = new T[current];
