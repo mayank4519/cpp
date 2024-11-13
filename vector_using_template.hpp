@@ -18,9 +18,9 @@ public:
     //COPY ASSIGNMENT
     vector<T>& operator=(vector<T> & vv) 
     {
-        m_vec = new T[1];
         capacity = vv.capacity;
         current = vv.current;
+        m_vec = new T[current];
         for (int16_t i = 0; i < current; i++) 
         {
             m_vec[i] = vv.m_vec[i];
@@ -30,9 +30,9 @@ public:
 
     //COPY CONSTRUCTOR
     vector(vector<T> &vv) {
-        m_vec = new T[1];
         capacity = vv.capacity;
         current = vv.current;
+        m_vec = new T[current];
         for (int16_t i = 0; i < current; i++) 
         {
             m_vec[i] = vv.m_vec[i];
